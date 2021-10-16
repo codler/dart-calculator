@@ -2,6 +2,7 @@
   "name": "dart-calculator",
   "version": "1.0.0",
   "private": true,
+  "homepage": "/dart-calculator",
   "dependencies": {
     "@codler/utils": "^3.2.0",
     "@testing-library/jest-dom": "^5.14.1",
