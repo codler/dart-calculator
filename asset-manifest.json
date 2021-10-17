@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/dart-calculator/static/css/main.89815d18.chunk.css",
-    "main.js": "/dart-calculator/static/js/main.84875a90.chunk.js",
-    "runtime-main.js": "/dart-calculator/static/js/runtime-main.ab1b17a6.js",
-    "static/js/2.e74190cc.chunk.js": "/dart-calculator/static/js/2.e74190cc.chunk.js",
-    "static/js/3.15fe62fe.chunk.js": "/dart-calculator/static/js/3.15fe62fe.chunk.js",
+    "main.css": "/dart-calculator/static/css/main.27321290.chunk.css",
+    "main.js": "/dart-calculator/static/js/main.f96b5778.chunk.js",
+    "runtime-main.js": "/dart-calculator/static/js/runtime-main.e093c0a0.js",
+    "static/js/2.625031a2.chunk.js": "/dart-calculator/static/js/2.625031a2.chunk.js",
+    "static/js/3.95cbf4a8.chunk.js": "/dart-calculator/static/js/3.95cbf4a8.chunk.js",
     "index.html": "/dart-calculator/index.html",
-    "static/js/2.e74190cc.chunk.js.LICENSE.txt": "/dart-calculator/static/js/2.e74190cc.chunk.js.LICENSE.txt"
+    "static/js/2.625031a2.chunk.js.LICENSE.txt": "/dart-calculator/static/js/2.625031a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ab1b17a6.js",
-    "static/js/2.e74190cc.chunk.js",
-    "static/css/main.89815d18.chunk.css",
-    "static/js/main.84875a90.chunk.js"
+    "static/js/runtime-main.e093c0a0.js",
+    "static/js/2.625031a2.chunk.js",
+    "static/css/main.27321290.chunk.css",
+    "static/js/main.f96b5778.chunk.js"
   ]
 }
