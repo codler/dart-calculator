@@ -3,6 +3,7 @@ import { Modal, ScrollView, View } from "react-native";
 import { Button, Text } from "./components";
 import { useLocalStorage } from "@codler/utils";
 import { theme } from "native-base";
+import { Picker } from "@react-native-picker/picker";
 
 type GameState = GameRound[];
 type Player = number;
@@ -31,8 +32,13 @@ const displayScoreLabel = (score?: Score) => {
 const backgroundColor = theme.colors.coolGray[800];
 
 function App() {
+  const [numberOfPlayers, setNumberOfPlayers] = useLocalStorage<string>(
+    "numberOfPlayers",
+    "2"
+  );
+
   const config = {
-    numberOfPlayers: 2,
+    numberOfPlayers: parseInt(numberOfPlayers),
     numberOfDarts: 3,
     startPoint: 301,
   };
@@ -81,6 +87,21 @@ function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor }}>
+      <View>
+        <Picker
+          selectedValue={numberOfPlayers}
+          onValueChange={(itemValue, itemIndex) =>
+            setNumberOfPlayers(itemValue)
+          }
+        >
+          <Picker.Item label="One Player" value="1" />
+          <Picker.Item label="Two Players" value="2" />
+          <Picker.Item label="Three Players" value="3" />
+          <Picker.Item label="Four Players" value="4" />
+          <Picker.Item label="Five Players" value="5" />
+          <Picker.Item label="Six Players" value="6" />
+        </Picker>
+      </View>
       <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
         <Text>Players: {config.numberOfPlayers}</Text>
         <Text>Darts: {config.numberOfDarts}</Text>
@@ -137,6 +158,7 @@ function App() {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
+            flexWrap: "wrap",
             marginTop: 20,
           }}
         >
@@ -152,6 +174,7 @@ function App() {
           })}
         </View>
       </View>
+      <View style={{ height: 70 }}></View>
     </View>
   );
 }

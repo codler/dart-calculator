@@ -6,7 +6,7 @@ body {
 /* These styles make the root element full-height */
 #root {
   display: flex;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
