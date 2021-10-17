@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, ScrollView, View } from "react-native";
+import { Linking, Modal, ScrollView, View } from "react-native";
 import { Button, Text } from "./components";
 import { useLocalStorage } from "@codler/utils";
 import { theme } from "native-base";
@@ -183,7 +183,15 @@ function App() {
       </View>
       <View style={{ height: 140 }}></View>
       <View style={{ marginLeft: 10, marginRight: 10 }}>
-        <Text>Dart calculator made by Han Lin Yap</Text>
+        <Text>Dart calculator made by Han Lin Yap </Text>
+        <Text
+          style={{ textDecorationLine: "underline" }}
+          onPress={() =>
+            Linking.openURL("https://github.com/codler/dart-calculator")
+          }
+        >
+          Source code
+        </Text>
       </View>
       <View style={{ height: 70 }}></View>
     </View>
@@ -201,8 +209,14 @@ const ChooseScoreButton = (props: ChooseScoreButtonProps) => {
 
   return (
     <>
-      <View style={{ width: 50 }}>
-        <Button title={title} onPress={() => setIsVisible(true)} />
+      <View style={{ width: 60 }}>
+        <Button
+          color={
+            displayScoreLabel() !== title ? theme.colors.indigo[500] : undefined
+          }
+          title={title}
+          onPress={() => setIsVisible(true)}
+        />
       </View>
       <Modal onRequestClose={() => setIsVisible(false)} visible={isVisible}>
         <ScrollView style={{ backgroundColor }}>
