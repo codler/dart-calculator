@@ -21,7 +21,7 @@ interface GameRound {
 
 const displayScoreLabel = (score?: Score) => {
   if (!score) {
-    return ".";
+    return "____";
   } else if (score.multiplyer > 1) {
     return `${score.score}x${score.multiplyer}`;
   } else {
@@ -102,7 +102,14 @@ function App() {
           <Picker.Item label="Six Players" value="6" />
         </Picker>
       </View>
-      <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-around",
+          marginTop: 5,
+          marginBottom: 5,
+        }}
+      >
         <Text>Players: {config.numberOfPlayers}</Text>
         <Text>Darts: {config.numberOfDarts}</Text>
         <Text>StartPoint: {config.startPoint}</Text>
@@ -173,6 +180,10 @@ function App() {
             );
           })}
         </View>
+      </View>
+      <View style={{ height: 140 }}></View>
+      <View style={{ marginLeft: 10, marginRight: 10 }}>
+        <Text>Dart calculator made by Han Lin Yap</Text>
       </View>
       <View style={{ height: 70 }}></View>
     </View>
