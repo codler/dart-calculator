@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Button, Modal, ScrollView, Text, View } from "react-native";
+import { Modal, ScrollView, View } from "react-native";
+import { Button, Text } from "./components";
 import { useLocalStorage } from "@codler/utils";
+import { theme } from "native-base";
 
 type GameState = GameRound[];
 type Player = number;
@@ -25,6 +27,8 @@ const displayScoreLabel = (score?: Score) => {
     return `${score.score}`;
   }
 };
+
+const backgroundColor = theme.colors.coolGray[800];
 
 function App() {
   const config = {
@@ -76,7 +80,7 @@ function App() {
   };
 
   return (
-    <View>
+    <View style={{ flex: 1, backgroundColor }}>
       <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
         <Text>Players: {config.numberOfPlayers}</Text>
         <Text>Darts: {config.numberOfDarts}</Text>
@@ -139,8 +143,8 @@ function App() {
           {[...Array(config.numberOfPlayers)].map((_, playerNo) => {
             return (
               <View key={playerNo}>
-                <Text style={{ fontSize: 20 }}>Player {playerNo + 1}</Text>
-                <Text style={{ fontSize: 50 }}>
+                <Text style={{ fontSize: 25 }}>Player {playerNo + 1}</Text>
+                <Text style={{ fontSize: 60 }}>
                   {getRemainingPoints(playerNo)}
                 </Text>
               </View>
@@ -167,7 +171,7 @@ const ChooseScoreButton = (props: ChooseScoreButtonProps) => {
         <Button title={title} onPress={() => setIsVisible(true)} />
       </View>
       <Modal onRequestClose={() => setIsVisible(false)} visible={isVisible}>
-        <ScrollView>
+        <ScrollView style={{ backgroundColor }}>
           <View>
             <View
               style={{
