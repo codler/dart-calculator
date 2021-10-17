@@ -1,6 +1,6 @@
 import { theme } from "native-base";
 import { ReactNode } from "react";
-import { Text, TextProps } from "react-native";
+import { Text, TextProps, TextStyle } from "react-native";
 
 const ThemedText = (
   props: JSX.IntrinsicAttributes &
@@ -14,7 +14,7 @@ const ThemedText = (
     <Text
       style={{
         color: theme.colors.warmGray[50],
-        ...(style as any),
+        ...(style as TextStyle),
       }}
       {...rest}
     />
