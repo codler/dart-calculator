@@ -4,14 +4,11 @@ import { Button, Text } from "./components";
 import { useLocalStorage } from "@codler/utils";
 import { theme } from "native-base";
 import { Picker } from "@react-native-picker/picker";
+import { Score, possibleCheckOuts } from "./boardTargets";
 
 type GameState = GameRound[];
 type Player = number;
 type Dart = number;
-interface Score {
-  score: number;
-  multiplyer: number;
-}
 
 interface GameRound {
   [key: Player]: {
@@ -69,7 +66,7 @@ function App() {
     setGameState([...gameState]);
   };
 
-  const getRemainingPoints = (playerNo: number) => {
+  const getRemainingPoints = (playerNo: number): number => {
     let points = config.startPoint;
     gameState.forEach((round) => {
       if (round[playerNo]) {
@@ -176,6 +173,15 @@ function App() {
                 <Text style={{ fontSize: 60 }}>
                   {getRemainingPoints(playerNo)}
                 </Text>
+                {possibleCheckOuts(getRemainingPoints(playerNo), 2)?.map(
+                  (possibility) => {
+                    return (
+                      <Text>
+                        {possibility.map(displayScoreLabel).join(" --> ")}
+                      </Text>
+                    );
+                  }
+                )}
               </View>
             );
           })}
