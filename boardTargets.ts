@@ -16,15 +16,25 @@ const lastCheckOuts = targets.filter(
   (target) => target.multiplyer === 2 || target.score === 50
 );
 
+const cachePossibleCheckOuts: {
+  [key: number]: { [key: number]: Score[][] | undefined };
+} = {};
 export function possibleCheckOuts(
   points: number,
   darts: number
 ): Score[][] | undefined {
+  if (!cachePossibleCheckOuts[darts]) {
+    cachePossibleCheckOuts[darts] = {};
+  }
+  if (cachePossibleCheckOuts[darts].hasOwnProperty(points)) {
+    return cachePossibleCheckOuts[darts][points];
+  }
+
   if (darts <= 0 || darts * 60 < points) {
     return;
   }
 
-  return targets.reduce((prev, target) => {
+  const result = targets.reduce((prev, target) => {
     if (points - target.score * target.multiplyer < 0) {
       return prev;
     }
@@ -39,8 +49,13 @@ export function possibleCheckOuts(
         prev = [];
       }
 
-      checkOuts.forEach((checkOut) => checkOut.unshift(target));
-      prev = prev.concat(checkOuts);
+      prev = prev.concat(
+        checkOuts.map((checkOut) => {
+          const newCheckout = [...checkOut];
+          newCheckout.unshift(target);
+          return newCheckout;
+        })
+      );
     }
 
     const hits = lastCheckOuts.find(
@@ -58,6 +73,9 @@ export function possibleCheckOuts(
 
     return prev;
   }, undefined as Score[][] | undefined);
+
+  cachePossibleCheckOuts[darts][points] = result;
+  return result;
 }
 
 export default targets;

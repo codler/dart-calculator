@@ -1,54 +1,42 @@
 {
-  "name": "dart-calculator",
-  "version": "1.0.0",
-  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
   "homepage": "/dart-calculator",
-  "dependencies": {
-    "@codler/utils": "^3.2.0",
-    "@react-native-picker/picker": "^2.1.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.4.1",
-    "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.0",
-    "@types/react": "^17.0.30",
-    "@types/react-dom": "^17.0.9",
-    "@types/react-native": "^0.65.7",
-    "native-base": "^3.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-native-web": "^0.17.5",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.4.4",
-    "web-vitals": "^2.1.2"
-  },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -a -d build",
-    "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run web-build",
+    "deploy": "gh-pages -a -d web-build",
+    "build:web": "expo build:web",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "~1.15.0",
+    "expo": "~43.0.0",
+    "expo-status-bar": "~1.1.0",
+    "native-base": "^3.2.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.2",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-svg": "12.1.1",
+    "react-native-web": "0.17.1",
+    "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
-  }
+    "@babel/core": "^7.12.9",
+    "@react-aria/interactions": "^3.6.0",
+    "@react-stately/checkbox": "^3.0.3",
+    "@react-stately/collections": "^3.3.4",
+    "@react-stately/slider": "^3.0.3",
+    "@react-stately/tabs": "^3.0.1",
+    "@react-stately/toggle": "^3.2.3",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "gh-pages": "^3.2.3",
+    "typescript": "~4.3.5"
+  },
+  "private": true
 }
