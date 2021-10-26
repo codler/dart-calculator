@@ -25,6 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      - run: npm install -g expo-cli
 
       - run: git config --global user.name 'Han Lin Yap'
 
