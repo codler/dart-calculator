@@ -2,10 +2,17 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "lang": "en",
-  "name": "DartCalculator",
-  "short_name": "DartCalculator",
+  "name": "Dart Calculator",
+  "short_name": "Dart Calculator",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
+  "related_applications": [
+    {
+      "platform": "itunes",
+      "id": "com.codler.dart"
+    }
+  ],
+  "prefer_related_applications": true,
   "icons": [
     {
       "src": "/dart-calculator/pwa/chrome-icon/chrome-icon-144.png",

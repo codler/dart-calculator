@@ -1,22 +1,22 @@
 {
   "files": {
-    "app.js": "/dart-calculator/static/js/app.6faaaae3.chunk.js",
-    "app.js.map": "/dart-calculator/static/js/app.6faaaae3.chunk.js.map",
+    "app.js": "/dart-calculator/static/js/app.3db8fe88.chunk.js",
+    "app.js.map": "/dart-calculator/static/js/app.3db8fe88.chunk.js.map",
     "runtime~app.js": "/dart-calculator/static/js/runtime~app.ba51d24a.js",
     "runtime~app.js.map": "/dart-calculator/static/js/runtime~app.ba51d24a.js.map",
-    "static/js/2.0ce9332a.chunk.js": "/dart-calculator/static/js/2.0ce9332a.chunk.js",
-    "static/js/2.0ce9332a.chunk.js.map": "/dart-calculator/static/js/2.0ce9332a.chunk.js.map",
+    "static/js/2.1780b2ac.chunk.js": "/dart-calculator/static/js/2.1780b2ac.chunk.js",
+    "static/js/2.1780b2ac.chunk.js.map": "/dart-calculator/static/js/2.1780b2ac.chunk.js.map",
     "favicon-16.png": "/dart-calculator/favicon-16.png",
     "favicon-32.png": "/dart-calculator/favicon-32.png",
     "favicon.ico": "/dart-calculator/favicon.ico",
     "index.html": "/dart-calculator/index.html",
     "manifest.json": "/dart-calculator/manifest.json",
     "serve.json": "/dart-calculator/serve.json",
-    "static/js/2.0ce9332a.chunk.js.LICENSE.txt": "/dart-calculator/static/js/2.0ce9332a.chunk.js.LICENSE.txt"
+    "static/js/2.1780b2ac.chunk.js.LICENSE.txt": "/dart-calculator/static/js/2.1780b2ac.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.ba51d24a.js",
-    "static/js/2.0ce9332a.chunk.js",
-    "static/js/app.6faaaae3.chunk.js"
+    "static/js/2.1780b2ac.chunk.js",
+    "static/js/app.3db8fe88.chunk.js"
   ]
 }
