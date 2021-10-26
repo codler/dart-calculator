@@ -2,7 +2,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "homepage": "/dart-calculator",
   "scripts": {
-    "predeploy": "npm run web-build",
+    "predeploy": "npm run build:web",
     "deploy": "gh-pages -a -d web-build",
     "build:web": "expo build:web",
     "start": "expo start",
