@@ -212,11 +212,10 @@ function App() {
                 {possibilities && (
                   <Box rounded="xl" mt={1} bg="coolGray.700" p={14}>
                     {possibilities.map((possibility) => {
-                      return (
-                        <Text>
-                          {possibility.map(displayScoreLabel).join(" --> ")}
-                        </Text>
-                      );
+                      const text = possibility
+                        .map(displayScoreLabel)
+                        .join(" --> ");
+                      return <Text key={text}>{text}</Text>;
                     })}
                   </Box>
                 )}
@@ -226,9 +225,6 @@ function App() {
         </Flex>
         <Box my={32}>
           <Text>Dart calculator made by Han Lin Yap </Text>
-          <Link href="https://github.com/codler/dart-calculator" isExternal>
-            Source code
-          </Link>
         </Box>
       </Center>
     </ScrollView>
