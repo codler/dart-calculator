@@ -10,6 +10,11 @@
     {
       "platform": "itunes",
       "id": "com.codler.dart"
+    },
+    {
+      "platform": "play",
+      "url": "http://play.google.com/store/apps/details?id=com.codler.dart",
+      "id": "com.codler.dart"
     }
   ],
   "prefer_related_applications": true,
